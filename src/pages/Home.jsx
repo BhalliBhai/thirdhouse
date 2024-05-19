@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import loading from "../components/loading/loading.mp4";
 
 const useOnScreen = (ref) => {
   const [isIntersecting, setIntersecting] = useState(false);
@@ -26,7 +27,7 @@ const useOnScreen = (ref) => {
   return isIntersecting;
 };
 
-const Home = () => {
+const Home = ({loadingURL}) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const boxRefs = [useRef(), useRef(), useRef(), useRef()];
   const isIntersecting = boxRefs.map(useOnScreen);
@@ -103,7 +104,23 @@ const Home = () => {
         </div>
       </div>
 
+      <hr />
+      <video className="w-full max-w-xl rounded-lg" width="320" height="240" autoPlay muted loop>
+        <source src={loading} type="video/mp4" />
+        <source src="loading.ogg" type="video/ogg"></source>
+        Your browser does not support the video tag.
+      </video>
+
       {!isAuthenticated && (
+        <>
+        <div className="text-center flex items-center justify-center gap-2">
+          <p className="mt-4 text-center text-white">
+            Already have an account?{" "}
+            <a href="/login" className="text-white underline">
+              Sign In
+            </a>
+          </p>
+        </div>
         <div className="text-center flex items-center justify-center gap-2">
           <p className="mt-4 text-center text-white">
             Don't have an account?{" "}
@@ -112,6 +129,7 @@ const Home = () => {
             </a>
           </p>
         </div>
+        </>
       )}
     </>
   );
