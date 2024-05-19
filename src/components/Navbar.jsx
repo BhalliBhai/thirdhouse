@@ -55,7 +55,7 @@ const Navbar = ({ home }) => {
 
   return (
     <nav
-      className={`px-10 py-6 flex items-center justify-between ${
+      className={`px-3 lg:px-10 py-6 flex items-center justify-between ${
         home && !showMobileMenu ? "text-white" : "text-black"
       }`}
     >
@@ -92,12 +92,12 @@ const Navbar = ({ home }) => {
 
       {/* Logo */}
       <div className="flex items-center justify-center z-50 h-16">
-        <Link to="/" className="max-h-[75px]">
+        <Link to="/" className="max-h-[75px] md:ml-[74px] xl:ml-[80px]">
           {/* <h1 id="logo" className={`text-[36px] font-semibold ${home && !showMobileMenu ? 'text-white' : 'text-black'}`}>Keef X</h1> */}
           <img
             src="/images/Logo.jpeg"
             alt="Logo"
-            className="object-contain max-h-[80px]"
+            className="object-contain max-h-[80px] "
           />
         </Link>
       </div>

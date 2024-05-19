@@ -45,6 +45,12 @@ const Login = () => {
   return (
     <div className="flex items-center justify-center min-h-[80vh]">
       <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-md">
+      <p className="mt-4 text-center">
+          Don't have an account?{" "}
+          <a href="/signup" className="text-[#535353] underline">
+            Sign Up
+          </a>
+        </p>
         <h2 className="text-2xl font-bold text-center">Login</h2>
         <form onSubmit={LoginUser} className="mt-8 space-y-6">
           <div className="space-y-4">
@@ -75,12 +81,7 @@ const Login = () => {
             {loader ? <RequestLoader /> : "Login"}
           </button>
         </form>
-        <p className="mt-4 text-center">
-          Don't have an account?{" "}
-          <a href="/signup" className="text-[#535353] underline">
-            Sign Up
-          </a>
-        </p>
+       
       </div>
     </div>
   );

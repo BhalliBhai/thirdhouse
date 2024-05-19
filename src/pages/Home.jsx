@@ -73,14 +73,14 @@ const Home = () => {
           <a
             ref={boxRefs[0]}
             href="/about"
-            className="w-full sm:w-1/2 p-3 bg-[#3B3A40] h-[20vh] md:min-h-[60vh] cursor-pointer text-[20px] md:text-[52px] font-[600] uppercase text-white transition-opacity duration-1000 transform hover:scale-105 hover:shadow-md flex justify-center items-center mb-6 mr-4 rounded-2xl bg-opacity-60"
+            className="w-full sm:w-1/2 p-3 bg-[#3B3A40] h-[20vh] md:min-h-[60vh] cursor-pointer text-[20px] md:text-[52px] font-[600] uppercase text-white transition-opacity duration-1000 transform hover:scale-105 hover:shadow-md flex justify-center items-center mb-6 md:mr-4 rounded-2xl bg-opacity-60"
           >
             About
           </a>
           <a
             ref={boxRefs[1]}
             href="/investments"
-            className="w-full sm:w-1/2 p-3 bg-[#3B3A40] h-[20vh] md:min-h-[60vh] cursor-pointer text-[20px] md:text-[52px] font-[600] uppercase text-white transition-opacity duration-1000 transform hover:scale-105 hover:shadow-md flex justify-center items-center mb-6 mr-4 rounded-2xl bg-opacity-60"
+            className="w-full sm:w-1/2 p-3 bg-[#3B3A40] h-[20vh] md:min-h-[60vh] cursor-pointer text-[20px] md:text-[52px] font-[600] uppercase text-white transition-opacity duration-1000 transform hover:scale-105 hover:shadow-md flex justify-center items-center mb-6 md:mr-4 rounded-2xl bg-opacity-60"
           >
             Portfolio
           </a>
@@ -89,14 +89,14 @@ const Home = () => {
           <a
             ref={boxRefs[2]}
             href="/team"
-            className="w-full sm:w-1/2 p-3 bg-[#3B3A40] h-[20vh] md:min-h-[60vh] cursor-pointer text-[20px] md:text-[52px] font-[600] uppercase text-white transition-opacity duration-1000 transform hover:scale-105 hover:shadow-md flex justify-center items-center mb-6 mr-4 rounded-2xl bg-opacity-60"
+            className="w-full sm:w-1/2 p-3 bg-[#3B3A40] h-[20vh] md:min-h-[60vh] cursor-pointer text-[20px] md:text-[52px] font-[600] uppercase text-white transition-opacity duration-1000 transform hover:scale-105 hover:shadow-md flex justify-center items-center mb-6 md:mr-4 rounded-2xl bg-opacity-60"
           >
             Team
           </a>
           <a
             ref={boxRefs[3]}
             href="/contact"
-            className="w-full sm:w-1/2 p-3 bg-[#3B3A40] h-[20vh] md:min-h-[60vh] cursor-pointer text-[20px] md:text-[52px] font-[600] uppercase text-white transition-opacity duration-1000 transform hover:scale-105 hover:shadow-md flex justify-center items-center mb-6 mr-4 rounded-2xl bg-opacity-60"
+            className="w-full sm:w-1/2 p-3 bg-[#3B3A40] h-[20vh] md:min-h-[60vh] cursor-pointer text-[20px] md:text-[52px] font-[600] uppercase text-white transition-opacity duration-1000 transform hover:scale-105 hover:shadow-md flex justify-center items-center mb-6 md:mr-4 rounded-2xl bg-opacity-60"
           >
             Contact
           </a>
@@ -104,7 +104,13 @@ const Home = () => {
       </div>
 
       {!isAuthenticated && (
-        <div className="text-center flex items-center justify-center gap-2">
+        <div className="text-center flex items-center flex-col justify-center gap-2">
+          <p className="mt-4 text-center text-white">
+          Already have an account? {" "}
+            <a href="/login" className="text-white underline">
+              Login
+            </a>
+          </p>
           <p className="mt-4 text-center text-white">
             Don't have an account?{" "}
             <a href="/signup" className="text-white underline">

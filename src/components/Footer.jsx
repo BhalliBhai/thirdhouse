@@ -1,6 +1,8 @@
 import React from 'react';
 import { CiMail } from "react-icons/ci";
 import { FaLinkedinIn } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+
 
 const Footer = ({home}) => {
   return (
@@ -12,6 +14,9 @@ const Footer = ({home}) => {
         </a>
         <a href="https://www.linkedin.com/your-profile" className="bg-white px-4 py-3 rounded-md">
           <FaLinkedinIn size={26} />
+        </a>
+        <a href="https://www.linkedin.com/company/keefx" className="bg-white px-4 py-3 rounded-md">
+          <FaInstagram size={26} />
         </a>
       </div>
 

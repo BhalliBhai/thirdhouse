@@ -101,6 +101,12 @@ const Signup = () => {
   return (
     <div className="flex items-center justify-center min-h-[85vh]">
       <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-md">
+      <p className="mt-4 text-center">
+          Already have an account?{" "}
+          <a href="/login" className="text-[#535353] underline">
+            Login
+          </a>
+        </p>
         <h2 className="text-2xl font-bold text-center">Sign Up</h2>
         <form onSubmit={RegisterUser} className="mt-8 space-y-6">
           <div className="space-y-4">
@@ -163,12 +169,12 @@ const Signup = () => {
             {loader ? <RequestLoader /> : "Sign Up"}
           </button>
         </form>
-        <p className="mt-4 text-center">
+        {/* <p className="mt-4 text-center">
           Already have an account?{" "}
           <a href="/login" className="text-[#535353] underline">
             Login
           </a>
-        </p>
+        </p> */}
       </div>
     </div>
   );

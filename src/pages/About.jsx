@@ -4,7 +4,7 @@ import { aboutCardsData } from '../data';
 
 const About = () => {
   return (
-    <div className="text-center">
+    <div className="text-center about-image">
       <div className="top pt-12 pb-20">
         <h3 className="text-[24px] lg:text-[36px] font-medium text-white px-8 md:px-12 lg:px-36 text-center">We invest opportunistically and seek to add value, growth capital, and experience.</h3>
       </div>

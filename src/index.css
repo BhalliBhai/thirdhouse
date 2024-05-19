@@ -8,10 +8,11 @@
 
 body {
   overflow-x: hidden;
-  background-image: url("/public/images/background.png");
+  background-image: url("/public/images/bg-image.jpeg");
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* Ensures background doesn't scroll with content */
+  background-position: bottom;
+  background-attachment: fixed;
+  /* Ensures background doesn't scroll with content */
   background-repeat: no-repeat;
   position: relative;
   z-index: 1;
@@ -30,6 +31,7 @@ body {
     opacity: 0;
     transform: translateY(50px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -37,6 +39,7 @@ body {
 }
 
 @keyframes bump {
+
   0%,
   20%,
   50%,
@@ -44,9 +47,11 @@ body {
   100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-15px);
   }
+
   60% {
     transform: translateY(-7px);
   }
@@ -55,3 +60,28 @@ body {
 .bumping {
   animation: bump 2s infinite;
 }
+
+
+
+.about-image {
+  background: url('../public/images/desktop.jpeg');
+  /* height: 100%; */
+  z-index: 2;
+  overflow-x: hidden;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .about-image {
+    /* height: 100%; */
+    background-image: url("../public/images/mobile.jpeg");
+  }
+}
+
+ 
