@@ -9,11 +9,11 @@ const TeamCard = ({ image, name, description, position }) => {
         alt={name}
       />
       <div className="">
-        <div className="font-bold text-[18px] mt-3 text-white">{name}</div>
-        <div className="text-[#f3f3fc] font-semibold text-sm my-1">
+        <div className="font-bold text-[18px] mt-3 ">{name}</div>
+        <div className=" font-semibold text-sm my-1">
           {position}
         </div>
-        <p className="text-white text-[14px]">{description}</p>
+        <p className="text-[14px]">{description}</p>
       </div>
     </div>
   );

@@ -4,9 +4,14 @@ import TeamCard from "../components/TeamCard";
 
 const Team = () => {
   return (
-    <div className="text-center team-page">
-      <div className="top pt-8 pb-4 lg:pb-8">
-        <h3 className="text-[30px] lg:text-[46px] font-bold text-white px-8 md:px-12 lg:px-36 text-center">
+    <div className="text-center">
+      <div className="top pt-8 pb-4 lg:pb-8"
+      style={{
+        maxWidth:'1260px !important'
+      }}
+      
+      >
+        <h3 className="text-[30px] lg:text-[46px] font-bold px-8 md:px-12 lg:px-36 text-center">
           Meet The Team
         </h3>
       </div>

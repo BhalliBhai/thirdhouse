@@ -25,7 +25,7 @@ const useOnScreen = (ref) => {
   return isIntersecting;
 };
 
-const InvestmentCard = ({ data }) => {
+const InvestmentCard = ({ data, idx }) => {
   const { link, image } = data;
   const cardRef = useRef();
   const isIntersecting = useOnScreen(cardRef);
@@ -42,9 +42,9 @@ const InvestmentCard = ({ data }) => {
       target="_blank"
       rel="noopener noreferrer"
       ref={cardRef}
-      className="w-full h-full fade-in flex items-center p-1 justify-center"
+      className="w-full h-full fade-in text-black flex items-center p-1 justify-center"
     >
-      <img src={image} alt="Investment" className="object-contain h-[140px]" />
+     {data?.bg ? <img src={image} alt="Investment" className={`object-contain h-[140px] bg-[#0a0a0aad] px-3 rounded-lg`} />: <img src={image} alt="Investment" className="object-contain h-[140px]" />}
     </a>
   );
 };

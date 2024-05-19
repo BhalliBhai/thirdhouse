@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useLocation } from "react-router-dom";
 
 const Navbar = ({ home }) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [userName, setUserName] = useState("");
+  const {pathname} = useLocation()
 
   useEffect(() => {
     const logo = document.getElementById("logo");
@@ -55,8 +57,8 @@ const Navbar = ({ home }) => {
 
   return (
     <nav
-      className={`px-10 py-6 flex items-center justify-between ${
-        home && !showMobileMenu ? "text-white" : "text-black"
+      className={`px-10 py-6  flex items-center justify-between -mt-10 ${
+        home && !showMobileMenu && pathname === '/' ? "text-white" : "text-black"
       }`}
     >
       {/* Left options for large screens */}
@@ -91,12 +93,12 @@ const Navbar = ({ home }) => {
       </div>
 
       {/* Logo */}
-      <div className="flex items-center justify-center z-50 absolute left-1/2 transform -translate-x-1/2 h-16">
-        <Link to="/" className="max-h-[75px]">
+      <div className="flex items-center justify-center w-full sm:w-fit">
+        <Link to="/" className="max-h-[160px]">
           <img
-            src="/images/logoo.png"
+            src={pathname ? '/images/newLogo1.png' : "/images/newLogo.jpg"}
             alt="Logo"
-            className="object-contain max-h-[80px]"
+            className="w-full max-h-[160px]"
           />
         </Link>
       </div>
