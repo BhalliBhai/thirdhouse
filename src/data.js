@@ -84,6 +84,10 @@ export const investmentData = [
     image: "/images/lamm.svg",
     link: "http://lammindustries.com/"
   },
+  {
+    image: "/images/psyrx.jpg",
+    link: "https://www.psyrx.co/"
+  },
 ];
 
 export const teamData = [

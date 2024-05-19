@@ -61,7 +61,7 @@ const Home = () => {
     if (isIntersecting.some((value) => value)) {
       boxRefs.forEach((ref) => {
         ref.current.classList.add("fade-in");
-        ref.current.classList.add("bumping"); // Add bumping class here
+        ref.current.classList.add("bumping"); // Add bumping class
       });
     }
   }, [isIntersecting]);

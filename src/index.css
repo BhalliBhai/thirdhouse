@@ -17,6 +17,16 @@ body {
   z-index: 1;
 }
 
+body .bg {
+  background-image: url("/public/images/bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Ensures background doesn't scroll with content */
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
 .fade-in {
   animation: fadeIn 1s ease forwards;
 }

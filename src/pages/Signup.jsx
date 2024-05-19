@@ -62,10 +62,10 @@ const Signup = () => {
   const [loader, setLoader] = useState(false);
   const navigate = useNavigate();
   const [user, setUser] = useState({
-    userName: "",
+    name: "",
     email: "",
     password: "",
-    phoneNumber: "",
+    phone: "",
     state: "",
   });
 
@@ -106,8 +106,8 @@ const Signup = () => {
           <div className="space-y-4">
             <input
               type="text"
-              name="userName"
-              value={user.userName}
+              name="name"
+              value={user.name}
               onChange={handleChange}
               className="w-full px-3 py-2 border border-gray-300 focus:outline-none focus:border-black"
               placeholder="Name"
@@ -115,8 +115,8 @@ const Signup = () => {
             />
             <input
               type="tel"
-              name="phoneNumber"
-              value={user.phoneNumber}
+              name="phone"
+              value={user.phone}
               onChange={handleChange}
               placeholder="Phone Number"
               className="w-full px-3 py-2 border border-gray-300 focus:outline-none focus:border-black"

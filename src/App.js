@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
@@ -10,17 +10,12 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 
 function App() {
-
-  function HomePage() {
-    return (
-      <div className="overflow-hidden">
-        <Home />
-      </div>
-    )
-  }
+  const location = useLocation();
+  const currentPath = location.pathname;
+  const divClass = (currentPath === "/team" || currentPath === "/about") ? "bg" : "background";
 
   return (
-    <div>
+    <div className={divClass}>
       <Navbar home={true} />
       <Routes>
         <Route path="/" element={<Home />} />
