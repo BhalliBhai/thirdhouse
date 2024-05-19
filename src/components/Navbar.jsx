@@ -93,7 +93,7 @@ const Navbar = ({ home }) => {
       </div>
 
       {/* Logo */}
-      <div className="flex items-center justify-center w-full sm:w-fit">
+      <div className="flex items-center justify-center ml-10 w-full sm:w-fit">
         <Link to="/" className="max-h-[160px]">
           <img
             src={pathname ? '/images/newLogo1.png' : "/images/newLogo.jpg"}
