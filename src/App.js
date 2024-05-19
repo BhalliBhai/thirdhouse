@@ -8,11 +8,24 @@ import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import { useEffect, useState } from "react";
 
 function App() {
   const location = useLocation();
   const currentPath = location.pathname;
-  const divClass = (currentPath === "/team" || currentPath === "/about") ? "bg" : "background";
+  const [divClass, setDivClass] = useState("");
+
+  useEffect(() => {
+    if (currentPath === "/team" || currentPath === "/about") {
+      setDivClass("bg");
+    } else if (currentPath === "/") {
+      setDivClass("landing");
+    } else {
+      setDivClass("background");
+    }
+  }, [currentPath]);
+
+  console.log("divClass: ", divClass);
 
   return (
     <div className={divClass}>

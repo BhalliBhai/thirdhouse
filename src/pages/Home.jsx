@@ -68,24 +68,24 @@ const Home = () => {
 
   return (
     <>
-      <div className="flex flex-wrap justify-center px-4 sm:px-4 md:px-8 lg:w-[75%] xl:w-[67.5%] mx-auto py-6 min-h-[65vh]">
-        <div className="flex justify-between w-full gap-6">
+      <div className="flex flex-wrap justify-center px-4 sm:px-4 md:px-8 lg:w-[75%] xl:w-[67.5%] mx-auto py-6 min-h-[62.5vh]">
+        <div className="flex justify-between w-full gap-4 mt-8 md:mt-0">
           <a
             ref={boxRefs[0]}
             href="/about"
-            className="w-full sm:w-1/2 p-3 bg-[#3B3A40] h-[20vh] md:min-h-[60vh] cursor-pointer text-[20px] md:text-[52px] font-[600] uppercase text-white transition-opacity duration-1000 transform hover:scale-105 hover:shadow-md flex justify-center items-center mb-6 mr-4 rounded-2xl bg-opacity-60"
+            className="w-full sm:w-1/2 p-3 bg-[#3B3A40] h-[20vh] md:min-h-[60vh] cursor-pointer text-[20px] md:text-[52px] font-[600] uppercase text-white transition-opacity duration-1000 transform hover:scale-105 hover:shadow-md flex justify-center items-center mb-2 md:mb-6 mr-4 rounded-2xl bg-opacity-60"
           >
             About
           </a>
           <a
             ref={boxRefs[1]}
             href="/investments"
-            className="w-full sm:w-1/2 p-3 bg-[#3B3A40] h-[20vh] md:min-h-[60vh] cursor-pointer text-[20px] md:text-[52px] font-[600] uppercase text-white transition-opacity duration-1000 transform hover:scale-105 hover:shadow-md flex justify-center items-center mb-6 mr-4 rounded-2xl bg-opacity-60"
+            className="w-full sm:w-1/2 p-3 bg-[#3B3A40] h-[20vh] md:min-h-[60vh] cursor-pointer text-[20px] md:text-[52px] font-[600] uppercase text-white transition-opacity duration-1000 transform hover:scale-105 hover:shadow-md flex justify-center items-center mb-2 md:mb-6 mr-4 rounded-2xl bg-opacity-60"
           >
             Portfolio
           </a>
         </div>
-        <div className="flex justify-between w-full gap-6">
+        <div className="flex justify-between w-full gap-4">
           <a
             ref={boxRefs[2]}
             href="/team"
@@ -102,6 +102,17 @@ const Home = () => {
           </a>
         </div>
       </div>
+
+      {!isAuthenticated && (
+        <div className="text-center flex items-center justify-center gap-2">
+          <p className="mt-4 text-center text-white">
+            Already have an account?{" "}
+            <a href="/login" className="text-white underline">
+              Login
+            </a>
+          </p>
+        </div>
+      )}
 
       {!isAuthenticated && (
         <div className="text-center flex items-center justify-center gap-2">

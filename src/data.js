@@ -87,6 +87,14 @@ export const investmentData = [
     image: "/images/psyrx.jpg",
     link: "https://www.psyrx.co/",
   },
+  {
+    image: "/images/leaf.jpeg",
+    link: "http://shimshonhouse.com/",
+  },
+  {
+    image: "/images/shim.jpeg",
+    link: "http://leafwellfarm.com/",
+  },
 ];
 
 export const teamData = [
@@ -105,7 +113,7 @@ export const teamData = [
       "Leafwellfarm.com investor and partner, Amy founded Shou Sugi Ban House a $50M wellness property located in the Hamptons, NY Amys background as an international M&A lawyer combined with her entrepreneurial spirit and past success gives Third House Capital an advantage when considering future opportunities.",
   },
   {
-    image: "/images/jake.jpg",
+    image: "/images/Jay.jpeg",
     name: "Jack Jay",
     position: "Partner",
     description:
@@ -119,7 +127,7 @@ export const teamData = [
       "Yitzy is a serial entrepreneur.  He is the senior vice president of Cascade Holdings and is responsible for a skilled nursing home portfolio encompassing thousands of units.",
   },
   {
-    image: "/images/jake.jpg",
+    image: "/images/judah.jpeg",
     name: "Judah Kunstler CPA (Picker Auerbach Meisles Kunstler CPA)",
     position: "Chief Financial Officer",
     description:
@@ -132,4 +140,16 @@ export const teamData = [
     position: "Tech & dev Analyst",
     description: "",
   },
+  // {
+  //   image: "/images/Jay.jpeg",
+  //   name: "Jack Jay",
+  //   position: "",
+  //   description: "",
+  // },
+  // {
+  //   image: "/images/Judah.jpeg",
+  //   name: "Judah",
+  //   position: "",
+  //   description: "",
+  // },
 ];

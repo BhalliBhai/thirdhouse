@@ -91,16 +91,17 @@ const Navbar = ({ home }) => {
       </div>
 
       {/* Logo */}
-      <div className="flex items-center justify-center z-50 md:absolute md:left-1/2 md:transform md:-translate-x-1/2 h-16">
+      <div className="flex items-center justify-center z-50 absolute left-1/2 transform -translate-x-1/2 h-16">
         <Link to="/" className="max-h-[75px]">
-          {/* <h1 id="logo" className={`text-[36px] font-semibold ${home && !showMobileMenu ? 'text-white' : 'text-black'}`}>Keef X</h1> */}
           <img
-            src="/images/logoo.jpeg"
+            src="/images/logoo.png"
             alt="Logo"
             className="object-contain max-h-[80px]"
           />
         </Link>
       </div>
+
+      <div className="md:hidden" />
 
       {/* Right options for large screens */}
       <div className="hidden md:flex items-center space-x-3 z-50">
