@@ -95,7 +95,7 @@ const Navbar = ({ home }) => {
         <Link to="/" className="max-h-[75px]">
           {/* <h1 id="logo" className={`text-[36px] font-semibold ${home && !showMobileMenu ? 'text-white' : 'text-black'}`}>Keef X</h1> */}
           <img
-            src="/images/Logo.jpeg"
+            src="/images/logoo.jpeg"
             alt="Logo"
             className="object-contain max-h-[80px]"
           />
